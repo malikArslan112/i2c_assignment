@@ -1,38 +1,5 @@
 #root {
-  max-width: 1440px;
-  margin: 60px 120px 0;
-}
-
-.i2c_logo {
-  width: 79px;
-  height: 48px;
-}
-
-.navbar {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.navbar_links_container {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.nav_link {
-  font-weight: 400;
-  font-size: 16px;
-  color: #515151;
-}
-
-.nav_link:in-range {
-  background-color: #1434cb;
-  padding: 16px 32px;
-  border-width: 1px;
-  border-color: #1434cb;
-  border-radius: 40px;
-  box-shadow: #1434cb;
-  color: #fff;
-  font-weight: 700;
+  background-color: #ebf0ff;
+  padding: 60px 120px;
+  box-sizing: border-box;
 }

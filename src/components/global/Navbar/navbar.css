@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebf0ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  padding: 60px 120px 20px;
+}
+
+.sticky {
+  box-shadow: 0 0 16px rgba(230, 230, 230, 0.2);
+  animation: slideDown 0.5s ease;
+}
+
+.navbar_links_container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar_links_container a {
+  font-weight: 400;
+  font-size: 16px;
+  color: #515151;
+  transition: color 0.3s;
+}
+
+.active_link {
+  background-color: #1434cb;
+  padding: 16px 32px;
+  border-width: 1px;
+  border-color: #1434cb;
+  border-radius: 40px;
+  box-shadow: 0px 10px 40px 0px #1434cb80;
+  color: #fff !important;
+  font-weight: 700 !important;
+  transition: background-color 0.5s ease, font-weight 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.i2c_logo {
+  width: 79px;
+  height: 48px;
+}
