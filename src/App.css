@@ -1,5 +1,19 @@
 #root {
+  box-sizing: border-box;
+  place-items: center;
   background-color: #ebf0ff;
+  background-image: url("./assets/Background.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.app {
   padding: 60px 120px;
+  max-width: 1440px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }

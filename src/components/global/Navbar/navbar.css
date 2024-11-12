@@ -2,20 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ebf0ff;
-  position: fixed;
-  top: 0;
-  left: 0;
   transition: transform 0.3s ease, background-color 0.3s ease;
   width: 100%;
   box-sizing: border-box;
+}
+
+.sticky_navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: slideDown 0.5s ease;
   z-index: 2;
-  padding: 60px 120px 20px;
+  width: 100%;
 }
 
 .sticky {
+  position: relative;
   box-shadow: 0 0 16px rgba(230, 230, 230, 0.2);
-  animation: slideDown 0.5s ease;
+  padding: 60px 120px 20px;
+  background-color: #ebf0ff;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .navbar_links_container {

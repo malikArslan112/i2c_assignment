@@ -1,11 +1,8 @@
 import React from "react";
-import Navbar from "../../components/global/Navbar";
 import "./home.css";
 import { about_data, features_data, slider_images } from "../../utils/GlobalContants";
 
 function Home() {
-  const [activeSectionId, setActiveSectionId] = React.useState("");
-  const sections = React.useRef<(HTMLElement | null)[]>([]);
   const [state, setState] = React.useState({
     IsRequiredActive: false,
     name: "",
@@ -13,42 +10,12 @@ function Home() {
     email: "",
   });
 
-  React.useEffect(() => {
-    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSectionId(entry.target.id);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.6,
-    });
-
-    // Observe each section
-    sections.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
-
-    // Cleanup observer on component unmount
-    return () => {
-      const refs = sections;
-      refs.current.forEach((section) => {
-        if (section) observer.unobserve(section);
-      });
-    };
-  }, []);
-
   const handleInputChange = () => {};
 
   return (
     <>
-      <Navbar activeSectionId={activeSectionId} />
       <div className="sections_container">
-        <section ref={(el) => (sections.current[0] = el)} id="about">
+        <section id="about">
           <div className="about_left">
             <h1 className="main_heading">
               Lorem ipsum <span>dolor</span> sit amet yo 👋
@@ -80,7 +47,7 @@ function Home() {
           </div>
         </section>
 
-        <section ref={(el) => (sections.current[1] = el)} id="registration">
+        <section id="registration">
           {features_data?.map((item, index) => (
             <div key={index?.toString()} className={`feature_item`}>
               <div>
@@ -95,7 +62,7 @@ function Home() {
           ))}
         </section>
 
-        <section ref={(el) => (sections.current[2] = el)} id="careers">
+        <section id="careers">
           <div className="slider_info">
             <h2 className="slider_heading">Trusted by</h2>
             <p className="slider_desc">
@@ -123,7 +90,7 @@ function Home() {
           </div>
         </section>
 
-        <section ref={(el) => (sections.current[3] = el)} id="contact_us">
+        <section id="contact_us">
           <div className="reg_left">
             <img className="reg_left_img" src={slider_images.reg_left_img} />
           </div>
@@ -186,6 +153,36 @@ function Home() {
               <p className="active_link">Register</p>
             </form>
           </div>
+        </section>
+
+        <section id="footer">
+          <hr className="line" />
+
+          <div className="navbar_links_container footer_links">
+            <a className={window.location.pathname === "/faqs" ? "active_link" : ""} href="/faqs">
+              FAQs
+            </a>
+
+            <a
+              className={window.location.pathname === "/privacy-policy" ? "active_link" : ""}
+              href="/privacy-policy"
+            >
+              Privacy Policy
+            </a>
+
+            <a className={window.location.pathname === "/other" ? "active_link" : ""} href="/other">
+              Other
+            </a>
+
+            <a
+              className={window.location.pathname === "/contact-us" ? "active_link" : ""}
+              href="/contact-us"
+            >
+              Contact us
+            </a>
+          </div>
+
+          <p className="copyright">Copyright © 2024 i2c inc. All rights reserved.</p>
         </section>
       </div>
     </>
