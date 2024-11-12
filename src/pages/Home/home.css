@@ -127,12 +127,18 @@
 
 .slider_info {
   max-width: 445px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slider_heading {
   font-size: 36px;
   font-weight: 800;
   margin: 0;
+  position: relative;
+  padding: 0 10px 10px;
 }
 
 .slider_desc {
@@ -163,7 +169,6 @@
 #contact_us {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .reg_left {
@@ -179,6 +184,8 @@
   background-color: #fff;
   box-shadow: 0px 34px 44px -20px #b9ceea40;
   flex: 40%;
+  position: relative;
+  justify-content: center;
 }
 
 .reg_left_img {
@@ -206,6 +213,7 @@
 
 .input_container {
   width: 100%;
+  position: relative;
 }
 
 .form_input {
@@ -269,6 +277,34 @@
 
 .green_color {
   color: #057d21;
+}
+
+.reg_desc {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray);
+  margin-top: 20px;
+}
+
+.error_text {
+  position: absolute;
+  bottom: -30;
+  color: #eb5939;
+  font-size: 11px;
+  font-weight: 500;
+  display: block;
+}
+
+.blue_text {
+  position: relative;
+  color: var(--blue);
+  padding-bottom: 5px;
+}
+
+.curve_underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /* Extra small devices (phones, 600px and down) */
