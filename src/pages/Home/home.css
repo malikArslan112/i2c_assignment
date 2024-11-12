@@ -178,7 +178,7 @@
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 34px 44px -20px #b9ceea40;
-  flex: 25%;
+  flex: 40%;
 }
 
 .reg_left_img {
@@ -221,6 +221,16 @@
   margin-top: 8px;
 }
 
+.form_input:focus {
+  border-color: #7b9cfe;
+  background-color: #fff;
+  outline: none;
+}
+
+.value_color {
+  color: #383838;
+}
+
 #footer {
   width: 100%;
   display: flex;
@@ -247,17 +257,36 @@
   color: #515151;
 }
 
+.reg_btn {
+  cursor: pointer;
+  text-align: center;
+}
+
+.reg_btn:active {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.green_color {
+  color: #057d21;
+}
+
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+}

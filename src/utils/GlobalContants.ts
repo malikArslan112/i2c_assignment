@@ -11,6 +11,10 @@ import cola_logo from "../assets/Cola.svg";
 import twitter_logo from "../assets/Twitter.svg";
 import reg_left_img from "../assets/reg_left_img.svg";
 
+export const nameRegex = /^[a-zA-Z\s'-]+$/;
+export const companyNameRegex = /^[a-zA-Z0-9\s&.-]+$/;
+export const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 export const about_data = [
   {
     title: "Andrew Schultz",

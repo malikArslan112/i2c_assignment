@@ -2,6 +2,9 @@
   box-sizing: border-box;
   place-items: center;
   background-color: #ebf0ff;
+}
+
+.app_bg {
   background-image: url("./assets/Background.png");
   background-position: center top;
   background-repeat: no-repeat;
@@ -10,6 +13,7 @@
 .app {
   padding: 60px 120px;
   max-width: 1440px;
+  width: 100%;
 }
 
 * {
