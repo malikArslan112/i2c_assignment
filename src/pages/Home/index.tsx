@@ -118,7 +118,7 @@ function Home() {
             <div className="reg_right">
               {state.IsRegistered ? (
                 <div>
-                  <h2 className="slider_heading">Registration</h2>
+                  <h2 className="slider_heading green_colo">Registration</h2>
                 </div>
               ) : (
                 <>
