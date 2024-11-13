@@ -1,9 +1,10 @@
 import React from "react";
 import "./navbar.css";
+import CrossIcon from "../../icons/CrossIcon";
 
 function Navbar() {
   const [isSticky, setIsSticky] = React.useState(false);
-  const [isCollapsed, setIsCollapsed] = React.useState(false);
+  const [isCollapsed, setIsCollapsed] = React.useState(true);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +32,13 @@ function Navbar() {
         </a>
 
         <button className="menu_icon" onClick={toggleCollapse}>
-          <span>&#9776;</span>
+          {isCollapsed ? (
+            <span>&#9776;</span>
+          ) : (
+            <span className="cross_icon">
+              <CrossIcon />
+            </span>
+          )}
         </button>
 
         <div className={`navbar_links_container ${isCollapsed ? "collapsed" : "expanded"}`}>

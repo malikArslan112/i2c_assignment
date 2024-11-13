@@ -164,7 +164,7 @@ function Home() {
 
           <section id="careers">
             <div className="slider_info">
-              <h2 className="slider_heading">
+              <h2 className="slider_heading underlined_heading">
                 Trusted by
                 <svg
                   width="209"
