@@ -358,11 +358,34 @@
     margin-top: 44px;
   }
 
-  .about_data_item, .feature_item {
+  .about_data_item,
+  .feature_item {
     padding: 14px;
   }
 
   #features {
     padding: 14px;
+  }
+
+  .slider_container {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer_links {
+    gap: 20px;
+  }
+
+  .footer_links a {
+    font-size: 14px;
+  }
+
+  #footer {
+    gap: 20px;
+  }
+
+  .slider_container {
+    gap: 10px;
   }
 }
