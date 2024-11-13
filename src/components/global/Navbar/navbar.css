@@ -23,6 +23,7 @@
   background-color: #ebf0ff;
   margin: 0 auto;
   max-width: 1440px;
+  width: 100%;
 }
 
 .navbar_links_container {
@@ -62,4 +63,39 @@
 .i2c_logo {
   width: 79px;
   height: 48px;
+}
+
+.menu_icon {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  padding-inline: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  .menu_icon {
+    display: block;
+  }
+
+  .navbar_links_container.collapsed {
+    display: none;
+  }
+
+  .navbar_links_container.expanded {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .sticky {
+    padding: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sticky {
+    padding: 40px;
+  }
 }

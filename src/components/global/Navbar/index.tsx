@@ -3,6 +3,7 @@ import "./navbar.css";
 
 function Navbar() {
   const [isSticky, setIsSticky] = React.useState(false);
+  const [isCollapsed, setIsCollapsed] = React.useState(false);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,10 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
     <div className={isSticky ? "sticky_navbar" : ""}>
       <nav id="navbar" className={`navbar ${isSticky ? "sticky" : ""}`}>
@@ -25,7 +30,11 @@ function Navbar() {
           <img src={"i2c_logo.svg"} className="i2c_logo" alt="i2c logo" />
         </a>
 
-        <div className="navbar_links_container">
+        <button className="menu_icon" onClick={toggleCollapse}>
+          <span>&#9776;</span>
+        </button>
+
+        <div className={`navbar_links_container ${isCollapsed ? "collapsed" : "expanded"}`}>
           <a
             className={window.location.pathname === "/about-us" ? "active_link" : ""}
             href="/about-us"
